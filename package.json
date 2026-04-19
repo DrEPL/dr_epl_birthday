@@ -11,8 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "canvas-confetti": "^1.9.4",
     "lucide-react": "^0.525.0",
-    "next": "15.3.4",
+    "next": "^15.5.15",
     "next-seo": "^6.8.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

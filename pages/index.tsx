@@ -9,6 +9,19 @@ import { projects } from '@/data/projects';
 import { services } from '@/data/services';
 import { allSkillsList } from '@/data/skills';
 
+const techLogos = [
+  { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+  { name: 'PyTorch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'FastAPI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
+  { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+];
+
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
@@ -212,21 +225,25 @@ export default function Home() {
       </section>
 
       {/* ── TECH STACK SCROLL ── */}
-      <section className="py-20 overflow-hidden border-y border-[var(--border)] relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-deep)] via-transparent to-[var(--bg-deep)] z-10 pointer-events-none" />
-        <div className="container mx-auto px-6 mb-8 text-center relative z-20">
+      <section className="py-20 overflow-hidden border-y border-[var(--border)] relative bg-[var(--bg-elevated)]/10">
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--bg-deep)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--bg-deep)] to-transparent z-10 pointer-events-none" />
+        
+        <div className="container mx-auto px-6 mb-10 text-center relative z-20">
           <h3 className="font-code text-sm text-[var(--text-secondary)] uppercase tracking-widest">Technologies & Outils</h3>
         </div>
         
-        <div className="flex whitespace-nowrap animate-shimmer relative z-0" style={{ animationDuration: '30s' }}>
-          {[...allSkillsList, ...allSkillsList].map((skill, index) => (
-            <div key={index} className="inline-flex items-center gap-2 px-6 py-3 mx-2 glass-dark rounded-full border border-[var(--border)] text-[var(--text-secondary)] font-medium text-sm">
-              <Server size={14} className="text-[var(--accent-teal)]" />
-              {skill}
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] relative z-0">
+          {[...techLogos, ...techLogos, ...techLogos].map((tech, index) => (
+            <div key={index} className="inline-flex items-center gap-4 px-8 py-4 mx-3 glass-dark rounded-2xl border border-[var(--border)] text-[var(--text-primary)] font-medium text-base hover:border-[var(--accent-teal)] hover:shadow-[0_0_15px_rgba(0,191,166,0.2)] transition-all cursor-default">
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
+              {tech.name}
             </div>
           ))}
         </div>
       </section>
+
+
 
       {/* ── CTA SECTION ── */}
       <section className="py-24 relative overflow-hidden">

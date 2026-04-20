@@ -159,12 +159,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-dark rounded-2xl p-8 border border-[var(--border)] hover:border-[var(--accent-teal)] transition-colors group cursor-pointer"
+                className="glass-dark rounded-2xl p-8 border border-[var(--border)] hover:border-[var(--accent-teal)] transition-colors group cursor-pointer relative overflow-hidden"
               >
-                <div className="w-14 h-14 rounded-xl bg-[var(--bg-deep)] border border-[var(--border)] flex items-center justify-center mb-6 group-hover:bg-[var(--accent-teal)]/10 transition-colors">
+                {/* Giant SVG Watermark */}
+                <div className="absolute -bottom-6 -right-6 text-[var(--text-muted)] opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-700 group-hover:scale-110 transform z-0 pointer-events-none">
+                  <service.icon size={160} strokeWidth={1} />
+                </div>
+                
+                <div className="w-14 h-14 rounded-xl bg-[var(--bg-deep)] border border-[var(--border)] flex items-center justify-center mb-6 group-hover:bg-[var(--accent-teal)]/10 transition-colors relative z-10">
                   <service.icon className="w-7 h-7 text-[var(--accent-teal)]" />
                 </div>
-                <h3 className="text-xl font-bold font-heading mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold font-heading mb-3 relative z-10">{service.title}</h3>
                 <p className="text-[var(--text-secondary)] text-sm leading-relaxed mb-4">{service.description}</p>
                 <Link href="/services" className="text-sm text-[var(--accent-teal)] font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                   Découvrir <ArrowRight size={14} />

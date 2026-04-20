@@ -35,9 +35,14 @@ export default function Services() {
               transition={{ duration: 0.6 }}
               className="glass-dark border border-[var(--border)] rounded-3xl p-8 lg:p-12 overflow-hidden relative group"
             >
-              {/* Decorative Background */}
+              {/* Decorative Background Glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[var(--accent-teal)]/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:scale-110 transition-transform duration-700" />
               
+              {/* Giant SVG Watermark */}
+              <div className="absolute -bottom-10 -right-10 text-[var(--text-muted)] opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-700 group-hover:scale-110 transform z-0 pointer-events-none">
+                <service.icon size={280} strokeWidth={1} />
+              </div>
+
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
                 <div className="lg:col-span-8 space-y-4">
                   <div className="flex items-center gap-4 mb-2">

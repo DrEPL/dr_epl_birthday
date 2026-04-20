@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Nav from './Nav';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,7 +12,7 @@ interface LayoutProps {
 
 export default function Layout({ 
   children, 
-  title = "Dolnick Prudhome ENZANZA | Ingénieur IA & Big Data", 
+  title = "Dr EPL | Ingénieur IA & Big Data", 
   description = "Portfolio professionnel de Dolnick Prudhome ENZANZA, Ingénieur en Intelligence Artificielle et Big Data. Solutions innovantes pour l'Afrique."
 }: LayoutProps) {
   return (
@@ -46,6 +47,7 @@ export default function Layout({
           {children}
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </>
   );

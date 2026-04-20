@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <span className="font-heading font-bold text-2xl tracking-wide">
-                Dolnick<span className="text-[var(--accent-teal)]">.</span>
+                Dr<span className="text-[var(--accent-teal)]">.</span> EPL
               </span>
             </Link>
             <p className="text-[var(--text-secondary)] text-sm max-w-xs leading-relaxed">
@@ -56,6 +56,17 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                <Phone className="w-5 h-5 text-[var(--accent-teal)] flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="https://wa.me/221784518582" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-teal)] transition-colors">
+                    +221 78 451 85 82 (WhatsApp)
+                  </a>
+                  <a href="https://wa.me/242069462886" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-teal)] transition-colors">
+                    +242 06 946 28 86 (WhatsApp)
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
                 <MapPin className="w-5 h-5 text-[var(--accent-teal)] flex-shrink-0" />
                 <span>Dakar, Sénégal<br/>(Disponible en remote)</span>
               </li>
@@ -66,7 +77,7 @@ export default function Footer() {
 
         <div className="border-t border-[var(--border)] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[var(--text-muted)] text-sm">
-            &copy; {currentYear} Dolnick Prudhome ENZANZA. Tous droits réservés.
+            &copy; {currentYear} Dr EPL. Tous droits réservés.
           </p>
           <p className="text-[var(--text-muted)] text-xs flex items-center gap-1">
             Construit avec Next.js & Tailwind CSS

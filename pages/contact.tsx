@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Send, Phone } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -68,6 +68,23 @@ export default function Contact() {
                     <a href="mailto:dolnickenzanza@gmail.com" className="text-[var(--text-primary)] hover:text-[var(--accent-teal)] transition-colors">
                       dolnickenzanza@gmail.com
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-[var(--bg-deep)] border border-[var(--border)] rounded-full text-[var(--accent-teal)]">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[var(--text-muted)] font-medium mb-1">WhatsApp</p>
+                    <div className="flex flex-col gap-1">
+                      <a href="https://wa.me/221784518582" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)] hover:text-[var(--accent-teal)] transition-colors">
+                        +221 78 451 85 82
+                      </a>
+                      <a href="https://wa.me/242069462886" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)] hover:text-[var(--accent-teal)] transition-colors">
+                        +242 06 946 28 86
+                      </a>
+                    </div>
                   </div>
                 </div>
 

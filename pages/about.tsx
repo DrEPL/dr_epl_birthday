@@ -21,6 +21,19 @@ export default function About() {
           <div className="w-20 h-1 bg-[var(--accent-teal)] rounded-full"></div>
         </div>
 
+        {/* Presentation */}
+        <section className="mb-16">
+          <div className="glass-dark p-8 md:p-10 rounded-3xl border border-[var(--border)]">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-[var(--text-primary)]">
+              Je suis <span className="teal-gradient-text">Dolnick Prudhome ENZANZA</span>
+            </h2>
+            <h3 className="text-sm font-code font-semibold text-[var(--text-muted)] mb-6 uppercase tracking-wider">Ingénieur en IA et Big Data</h3>
+            <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
+              J'ai un fort intérêt pour l'IA, la donnée, l'IoT et les systèmes intelligents. Passionné par la recherche et les technologies émergentes, mon objectif est de concevoir des solutions fondées sur les valeurs et les réalités africaines.
+            </p>
+          </div>
+        </section>
+
         {/* Vision & Philosophy */}
         <section className="mb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -93,7 +106,7 @@ export default function About() {
                   <h3 className="font-heading font-bold text-lg text-[var(--text-primary)]">Master en Intelligence Artificielle & Big Data</h3>
                   <span className="text-xs font-code text-[var(--accent-teal)] bg-[var(--accent-teal)]/10 px-2 py-1 rounded">Récent</span>
                 </div>
-                <h4 className="text-[var(--text-secondary)] text-sm mb-4 font-medium">Institution / Université</h4>
+                <h4 className="text-[var(--text-secondary)] text-sm mb-4 font-medium">Université Cheick Anta Diop</h4>
                 <p className="text-[var(--text-muted)] text-sm leading-relaxed">
                   Spécialisation en apprentissage automatique, traitement du langage naturel (NLP), et architectures distribuées pour le traitement de données massives.
                 </p>
@@ -110,7 +123,7 @@ export default function About() {
                   <h3 className="font-heading font-bold text-lg text-[var(--text-primary)]">Licence en Génie Logiciel</h3>
                   <span className="text-xs font-code text-[var(--text-secondary)] bg-[var(--bg-elevated)] px-2 py-1 rounded">Précédent</span>
                 </div>
-                <h4 className="text-[var(--text-secondary)] text-sm mb-4 font-medium">Institution / Université</h4>
+                <h4 className="text-[var(--text-secondary)] text-sm mb-4 font-medium">CFI-CIRAS</h4>
                 <p className="text-[var(--text-muted)] text-sm leading-relaxed">
                   Bases solides en conception logicielle, algorithmique, structures de données, et développement d'applications web et mobiles.
                 </p>

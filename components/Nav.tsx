@@ -39,7 +39,7 @@ export default function Nav() {
             <span className="font-brand text-xl teal-gradient-text font-bold">DE</span>
           </div>
           <span className="font-heading font-bold text-lg hidden sm:block tracking-wide">
-            Dolnick<span className="text-[var(--accent-teal)]">.</span>
+            Dr<span className="text-[var(--accent-teal)]">.</span> EPL
           </span>
         </Link>
 

@@ -17,7 +17,7 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Portfolio | Dolnick Prudhome ENZANZA</title>
+        <title>Portfolio | Dr EPL</title>
         <meta name="description" content="Découvrez mes projets en Intelligence Artificielle, Big Data et développement d'applications." />
       </Head>
 
